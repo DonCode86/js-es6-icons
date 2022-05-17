@@ -118,7 +118,7 @@
  for (let i = 0; i < cards.length; i++) {
      const cardsList = `
 	 <div class="title">
-        ${cards[i].type}
+        ${cards[i].name}
     </div>
     <div class="picture">
         <i class="${cards[i].family} ${cards[i].prefix}${cards[i].name}"></i>
@@ -127,10 +127,6 @@
 	`;
 
      cardsContainer.innerHTML += cardsList
-     if (cards[i].color === "orange") {
-         const picture = document.querySelector('.picture')
-         picture.classList.add("orange-font")
-     }
  }
 
 
