@@ -113,8 +113,7 @@
  ];
  const cardsContainer = document.querySelector(".cards-container")
  const title = document.querySelector('.title')
- let picture = document.querySelector('.picture')
- const blueRoba = []
+ const picture = document.querySelector('.picture')
 
  for (let i = 0; i < cards.length; i++) {
      const cardsList = `
@@ -134,17 +133,8 @@
      }
  }
 
- function myFunction(item) {
-     if (cards.color === "orange") {
-         const picture = document.querySelector('.picture')
-         picture.classList.add("orange-font")
-     }
- }
- cards.forEach(myFunction);
- picture.classList.add("orange-font")
- picture.classList.add("orange-font")
- console.log(blueRoba)
-     //filtri per tipo
+
+ //filtri per tipo
  const animalCards = cards.filter((elm) => {
      if (elm.type === "animal") {
          return true;
