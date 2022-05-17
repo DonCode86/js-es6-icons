@@ -121,13 +121,14 @@
         ${cards[i].name}
     </div>
     <div class="picture">
-        <i class="${cards[i].family} ${cards[i].prefix}${cards[i].name}"></i>
+        <i class="${cards[i].family} ${cards[i].prefix}${cards[i].name} ${cards[i].color}"></i>
     </div>
     <script src="data.js"></script>
 	`;
 
      cardsContainer.innerHTML += cardsList
  }
+
 
 
  //filtri per tipo
@@ -145,7 +146,7 @@
      return false;
  })
 
- const usreCards = cards.filter((elm) => {
+ const userCards = cards.filter((elm) => {
      if (elm.type === "user") {
          return true;
      }
