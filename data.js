@@ -113,7 +113,8 @@
  ];
  const cardsContainer = document.querySelector(".cards-container")
  const title = document.querySelector('.title')
- const picture = document.querySelector('.picture')
+ let picture = document.querySelector('.picture')
+ const blueRoba = []
 
  for (let i = 0; i < cards.length; i++) {
      const cardsList = `
@@ -124,6 +125,43 @@
         <i class="${cards[i].family} ${cards[i].prefix}${cards[i].name}"></i>
     </div>
     <script src="data.js"></script>
-	 `;
+	`;
+
      cardsContainer.innerHTML += cardsList
+     if (cards[i].color === "orange") {
+         const picture = document.querySelector('.picture')
+         picture.classList.add("orange-font")
+     }
  }
+
+ function myFunction(item) {
+     if (cards.color === "orange") {
+         const picture = document.querySelector('.picture')
+         picture.classList.add("orange-font")
+     }
+ }
+ cards.forEach(myFunction);
+ picture.classList.add("orange-font")
+ picture.classList.add("orange-font")
+ console.log(blueRoba)
+     //filtri per tipo
+ const animalCards = cards.filter((elm) => {
+     if (elm.type === "animal") {
+         return true;
+     }
+     return false;
+ })
+
+ const vegetableCards = cards.filter((elm) => {
+     if (elm.type === "vegetable") {
+         return true;
+     }
+     return false;
+ })
+
+ const usreCards = cards.filter((elm) => {
+     if (elm.type === "user") {
+         return true;
+     }
+     return false;
+ })
